@@ -27,25 +27,34 @@ spriteOnHover has 6 parameters:
 
 - fps: Integer - The frame-per-second count of your animation (Default: 30)
 
-- orientation: Possible values: "horizontal" or "vertical" - The orientation of your spritesheet, for now, the plugin supports only a single-orientated spritesheet, and can’t handle multidimensional sprites. (Default:"horizontal");
+- orientation: Possible values: `"horizontal"` or `"vertical"` - The orientation of your spritesheet, for now, the plugin supports only a single-orientated spritesheet, and can’t handle multidimensional sprites. (Default: `"horizontal"`);
 Example:
+-[This](http://apolinariopassos.com.br) is a horizontal spritesheet
+-[This](http://apolinariopassos.com.br) is a vertical spritesheet
+-[This](http://apolinariopassos.com.br) is a multi-line spritesheet (not supported for now)
 
-*[This](http://apolinariopassos.com.br) is a horizontal spritesheet
-*[This](http://apolinariopassos.com.br) is a vertical spritesheet
-*[This](http://apolinariopassos.com.br) is a multi-line spritesheet (not supported for now)
 
-- rewind: Possible values: true, false or "unanimate" - How your animation should work on mouseleave: 
-true: the animation will be animatedly rewinded; 
-false: the animation will stop in the last frame;
-“unanimate": the sprite will go back straight to the first frame, with no animation 
-(Default: True);
+- rewind: Possible values: `true`, `false` or `"unanimate"` - How your animation should work on mouseleave: 
+                                                            - `true`: the animation will be animatedly rewinded; 
+                                                            - `false`: the animation will stop in the last frame;
+                                                            - `“unanimate"`: the sprite will go back straight to the first frame, with no animation 
+                                                            - (Default: True);
 
-- loop: Possible values: true, false or "infinite" - If false, your animation will be displayed once, if true, your animation will be looped, if "infinite", after it’s started, you will get an infinitely looping animation that is no longer controlled by the hover action; (default: false)
+- loop: Possible values: `true`, `false` or `"infinite"` - 
+                                                         - `false`, your animation will be displayed once, 
+                                                         - `true`, your animation will be looped
+                                                         - `"infinite"`, after it’s started, you will get an infinitely looping animation that is no longer controlled by the hover action; 
+                                                         - (default: false)
 
-- autostart: Possible values: true or false - Determines if your animation will autostart or only be triggered by hover. If true, the animation will, for the first time, start without a hover event and will 
-be animated (default: false)
+- autostart: Possible values: true or false - Determines if your animation will autostart or only be triggered by hover.
+                                            - `true`: the animation will start without a hover event 
+                                            - `false`: the animation will only start with on mouseover 
+                                            - (default: false)
 
-- repeat: Possible values: true or false - If true, the animation will be triggered everytime you hover the sprite (of course after finishing the last event), if false, the animation will be triggered only at the first hover action and after that will get stuck at the last frame of your animation. (deafult: true); 
+- repeat: Possible values: true or false - 
+                                         - `true`: the animation will be triggered everytime you hover the sprite (of course after finishing the last event)
+                                         - `false`, the animation will be triggered only at the first hover action and after that will get stuck at the last frame of your animation. 
+                                         - (deafult: true); 
 
 ## Demo & (lots of) Examples
 In the plugin's [page](http://www.apolinariopassos.com.br)
