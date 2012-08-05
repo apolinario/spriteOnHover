@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example</title>
+<script src="jquery-1.7.2.min.js"></script>
+<script src="jquery.spriteOnHover-0.2.5.min.js"></script>
+<style>
+#sprite1{
+			width: 43px;
+			height: 43px;
+			background: transparent url(http://spritely.net/images/bird-forward-back.png) 0px 0px no-repeat;
+}
+#sprite2{width: 71px;
+			height: 123px;
+			background: transparent url(images/smur-sprite.png) 0px 0px no-repeat;			
+}
+#sprite3{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-endo.png) 0px 0px no-repeat;}
+#sprite4{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-midia.png) 0px 0px no-repeat;}
+#sprite5{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-mobile.png) 0px 0px no-repeat;}
+#sprite6{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-politica.png) 0px 0px no-repeat;}
+#sprite7{width: 192px; height:195px;background: transparent url(images/explosion-spritesheet.png) 0px 0px no-repeat;}
+#sprite8{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-sites.png) 0px 0px no-repeat;}
+</style>    
+	<script>
+$(document).ready(function() {		
+	$('#sprite2').spriteOnHover({fps:30,orientation:'horizontal',rewind: false,loop:true,autostart:true,repeat:true});
+	$('#sprite1').spriteOnHover({fps:30,orientation:'vertical',rewind: false});
+	$('#sprite3').spriteOnHover({fps:30});
+	$('#sprite4').spriteOnHover({fps:30,loop: false,rewind: true,repeat:false});
+	$('#sprite5').spriteOnHover({fps:30});	
+	$('#sprite6').spriteOnHover({fps:30});
+	$('#sprite7').spriteOnHover({fps:30,loop:true, rewind: false,autostart:false});
+	$('#sprite8').spriteOnHover({fps:30});
+});
+
+</script>
+</head>
+
+<body>
+	<!--<div id="sprite1"></div>-->
+    <div id="sprite2"></div>
+    <div id="sprite3"></div>
+    <div id="sprite4"></div>
+    <div id="sprite5"></div>
+    <div id="sprite6"></div>
+    <div id="sprite7"></div>
+    <div id="sprite8"></div>
+    <div id="sprite9"></div>
+    
+</body>
+
+</html>
