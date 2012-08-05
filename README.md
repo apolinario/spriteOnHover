@@ -1,4 +1,4 @@
-## SpriteOnHover
+## spriteOnHover
 spriteOnHover is a lightweight (2.51KB) jQuery plugin is designed to **animate** your sprites on **hover** (duh). 
 
 ## Instalation
@@ -35,10 +35,14 @@ Example:
 
 
 - rewind: Possible values: `true`, `false` or `"unanimate"` - How your animation should work on mouseleave: 
-                                                            - `true`: the animation will be animatedly rewinded; 
+                                                           
+                                                            - `true`: the animation will be animatedly rewinded;
+                                                            - 
                                                             - `false`: the animation will stop in the last frame;
+                                                            - 
                                                             - `“unanimate"`: the sprite will go back straight to the first frame, with no animation 
                                                             - (Default: True);
+                                                            
 
 - loop: Possible values: `true`, `false` or `"infinite"` - 
                                                          - `false`, your animation will be displayed once, 
