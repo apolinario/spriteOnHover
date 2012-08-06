@@ -9,7 +9,8 @@ Include script *after* the jQuery library (unless you are packaging scripts some
     $('#yourSprite').spriteOnHover();
 
 This will make the plugin work this the default parameters, which points to this:
-     $('#yourSprite').spriteOnHover({fps:30, orientation:’horizontal’, rewind: true, loop: false, autostart:false;repeat:true});
+
+    $('#yourSprite').spriteOnHover({fps:30, orientation:’horizontal’, rewind: true, loop: false, autostart:false;repeat:true});
 
 The usage is just hovering the sprite, you set `$('#yourSprite').spriteOnHover();` and the element `'#yourSprite'` will be turned into a hoverable sprite, no need to use the `mouseover`, `mouseenter`, `mouseleave` or `hover` events of jquery.
 	
