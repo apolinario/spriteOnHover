@@ -56,7 +56,7 @@ spriteOnHover has 6 parameters:
     * `false`, the animation will be triggered only at the first hover action and after that will get stuck at the last frame of your animation. 
     * (deafult: `true`); 
 
-## Demo & (lots of) Examples
+## Demos & (lots of) Examples
 In the plugin's [page](http://www.apolinariopassos.com.br)
 
 ## Donate
