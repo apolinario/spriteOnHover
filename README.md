@@ -3,7 +3,7 @@ spriteOnHover is a lightweight (2.51KB) jQuery plugin is designed to **animate**
 
 ## Instalation
 Include script *after* the jQuery library (unless you are packaging scripts somehow else):
-`<script src="/path/to/jquery.spriteOnHover-0.2.5.js"></script>`
+`<script src="/path/to/jquery.spriteOnHover-0.2.5.min.js"></script>`
 
 ## Simplest Usage
     $('#yourSprite').spriteOnHover();
