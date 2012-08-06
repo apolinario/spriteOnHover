@@ -51,8 +51,8 @@ spriteOnHover has 6 parameters:
     * `false`: the animation will only start with on mouseover 
     * (default: `false`)
 
-*   repeat: Possible values: `true` or `false` - 
-    * `true`: the animation will be triggered everytime you hover the sprite (of course after finishing the last event)
+*   repeat: Possible values: `true` or `false`
+    * `true`: the animation will be triggered every time you hover the sprite (of course after finishing the last event)
     * `false`, the animation will be triggered only at the first hover action and after that will get stuck at the last frame of your animation. 
     * (deafult: `true`); 
 
