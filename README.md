@@ -28,9 +28,9 @@ spriteOnHover has 6 parameters:
 * fps: Integer - The frame-per-second count of your animation (Default: 30)
 
 *   orientation: Possible values: `"horizontal"` or `"vertical"` - The orientation of your spritesheet, for now, the plugin supports only a single-orientated spritesheet, and can’t handle multidimensional sprites. (Default: `"horizontal"`). Example:
-    * [This](http://apolinariopassos.com.br) is a horizontal spritesheet
-    * [This](http://apolinariopassos.com.br) is a vertical spritesheet
-    * [This](http://apolinariopassos.com.br) is a multi-line spritesheet (not supported for now)
+    * [This](http://apolinariopassos.com.br/images/explosion-spritesheet.png) is a horizontal spritesheet
+    * [This](http://apolinariopassos.com.br/dev/images/btn-seta-clientes-spritesheet-vert.png) is a vertical spritesheet
+    * [This](http://apolinariopassos.com.br/dev/images/multi-line-animation.jpg) is a multi-line spritesheet (not supported for now)
 
 
 *   rewind: Possible values: `true`, `false` or `"unanimate"` - Is how your animation should work on mouseleave: 
