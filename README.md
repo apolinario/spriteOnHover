@@ -59,6 +59,11 @@ spriteOnHover has 6 parameters:
 ## Demo & (lots of) Examples
 In the plugin's [page](http://www.apolinariopassos.com.br)
 
+## Donate
+Want to help me get the TODO features faster or the plugin just solved your problem? 
+[Donate](http://www.apolinariopassos.com.br) <3
+
+
 ## License
 
                 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
