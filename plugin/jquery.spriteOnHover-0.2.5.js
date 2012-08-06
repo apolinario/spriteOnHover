@@ -11,7 +11,6 @@
  
 (function( $ ){
 $.fn.spriteOnHover = function(args){
-				if($(this).length){
 					 var args = $.extend( {
 					  'fps'         : 30,
 					  'orientation' : 'horizontal',
@@ -38,7 +37,7 @@ $.fn.spriteOnHover = function(args){
 					var looper_out;
 					var path = $(this).css('background-image').replace('url', '').replace('(', '').replace(')', '').replace('"', '').replace('"', '')
 					var count = $('img[id^="tempImg"]').length + 1;
-					var tempImg = '<img id="tempImg'+count+'" src="' + path + ' "/>';
+					var tempImg = '<img style="max-width: inherit !important;width: inherit !important;min-width: inherit !important;" id="tempImg'+count+'" src="' + path + ' "/>';
 					
 					$('body').append(tempImg); 
 					$('#tempImg'+count).hide();
@@ -55,8 +54,7 @@ $.fn.spriteOnHover = function(args){
 							}
 							else{
 								var real_size = $(this).height();
-								var frame_size = $(this_parent).height();
-								
+								var frame_size = $(this_parent).height();								
 							}
 							var number_of_frames = (real_size/frame_size);
 							var margin_size = frame_size;
@@ -69,12 +67,13 @@ $.fn.spriteOnHover = function(args){
 										var finalizouAnimacao = false;
 										looper_in = setInterval(function(){
 												counter++;
-												executando = true
+												executando = true;
 													$(this_parent).mouseleave(function(){
 														if(loop != 'infinite'){
 															counter = number_of_frames;
 															mouseleft = true;
 															if(!finalizouAnimacao){
+																if(!repeat)
 																executou = true;
 															}
 														}
@@ -102,7 +101,8 @@ $.fn.spriteOnHover = function(args){
 																clearInterval(looper_in);
 																executando = false;
 															}
-															executou = true;
+															if(!repeat)
+																executou = true;
 												}
 												else{
 														if(margin_size <= (real_size-(frame_size)))
@@ -113,7 +113,6 @@ $.fn.spriteOnHover = function(args){
 														}
 														margin_size = margin_size+frame_size;
 												}
-											console.log(executando);
 											},(parseInt(1000/fps)));
 									}
 									
@@ -123,22 +122,29 @@ $.fn.spriteOnHover = function(args){
 										var counter = 0;
 										looper_out = setInterval(function(){
 											counter++;
-											if(counter == (number_of_frames)){
+											var backgroundPos = $(this_parent).css('background-position').split(" ");
+											if(sprite_orientation == 'horizontal')
+												var Pos = backgroundPos[0];
+											else
+												var	Pos = backgroundPos[1];
+											if(counter == (number_of_frames) || parseInt(Pos) == 0){
+												executando = false;
 												if(repeat)
 													executou = false;	
 												$(this_parent).css("background-position","0px 0px");		
 												clearInterval(looper_out);
 											}
-												margin_size = margin_size-frame_size;
-												if(margin_size <= (real_size-(frame_size))){
-													if(sprite_orientation == 'horizontal')
-														$(this_parent).css("background-position","-"+margin_size+"px 0px");
-													else
-														$(this_parent).css("background-position","0px -"+margin_size+"px");	
-												}
+											margin_size = margin_size-frame_size;
+											if(margin_size <= (real_size-(frame_size))){
+												if(sprite_orientation == 'horizontal')
+													$(this_parent).css("background-position","-"+margin_size+"px 0px");
+												else
+													$(this_parent).css("background-position","0px -"+margin_size+"px");	
+											}
 										},(parseInt(1000/fps)));
 								}else{
 									executou = true;
+									executando = false;
 								}									
 							}
 							
@@ -172,6 +178,7 @@ $.fn.spriteOnHover = function(args){
 												clearInterval(looper_in);
 												if(repeat)
 													executou = false;
+												executando = false;
 											}
 											else if(!autostart){
 												if(rewind==true && loop != 'infinite'){
@@ -190,5 +197,4 @@ $.fn.spriteOnHover = function(args){
 							$(this).remove();
 					});
 				}
-			}
 })( jQuery );
