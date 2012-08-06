@@ -1,5 +1,5 @@
 ## spriteOnHover
-spriteOnHover is a lightweight (2.51KB) jQuery plugin is designed to **animate** your sprites on **hover** (duh). 
+[spriteOnHover](http://apolinariopassos.com.br/dev/spriteonhover-jquery-plugin/) is a lightweight jQuery plugin designed to **animate** your sprites on **hover** (duh). 
 
 ## Instalation
 Include script *after* the jQuery library (unless you are packaging scripts somehow else):
@@ -56,12 +56,12 @@ spriteOnHover has 6 parameters:
     * `false`, the animation will be triggered only at the first hover action and after that will get stuck at the last frame of your animation. 
     * (deafult: `true`); 
 
-## Demos & (lots of) Examples
-In the plugin's [page](http://www.apolinariopassos.com.br)
+## Demos & Examples
+In the plugin's [page](http://apolinariopassos.com.br/dev/spriteOnHover/demo/)
 
 ## Donate
 Want to help me get the TODO features faster or the plugin just solved your problem? 
-[Donate](http://www.apolinariopassos.com.br) <3
+[Donate](http://www.apolinariopassos.com.br/donate) <3
 
 
 ## License
