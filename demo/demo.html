@@ -2,52 +2,75 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Example</title>
+<title>jQuery SpriteOnHover (Sprite on Hover) demonstration</title>
 <script src="jquery-1.7.2.min.js"></script>
-<script src="jquery.spriteOnHover-0.2.5.min.js"></script>
+<script src="jquery.spriteOnHover-0.2.5.js"></script>
+<link rel="stylesheet" id="tw-bootstrap-css" href="bootstrap.min.css?ver=2.0.3" type="text/css" media="all">
+
 <style>
+div{margin: 30px}
+.left{width: 130px; float:left}
+.right{width: 900px; float:left; margin-left: 35px}
 #sprite1{
 			width: 43px;
 			height: 43px;
-			background: transparent url(http://spritely.net/images/bird-forward-back.png) 0px 0px no-repeat;
-}
+			background: transparent url(images/btn-seta-clientes-spritesheet-vert.png);
+		}
 #sprite2{width: 71px;
 			height: 123px;
 			background: transparent url(images/smur-sprite.png) 0px 0px no-repeat;			
 }
-#sprite3{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-endo.png) 0px 0px no-repeat;}
-#sprite4{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-midia.png) 0px 0px no-repeat;}
-#sprite5{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-mobile.png) 0px 0px no-repeat;}
-#sprite6{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-politica.png) 0px 0px no-repeat;}
-#sprite7{width: 192px; height:195px;background: transparent url(images/explosion-spritesheet.png) 0px 0px no-repeat;}
-#sprite8{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-sites.png) 0px 0px no-repeat;}
+#sprite3{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-midia.png) 0px 0px no-repeat;}
+#sprite4{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-mobile.png) 0px 0px no-repeat;}
+#sprite5{width: 100px; height:100px;background: transparent url(images/servicos-spritesheet-sites.png) 0px 0px no-repeat;}
+#sprite6{width: 192px; height:195px;background: transparent url(images/explosion-spritesheet.png) 0px 0px no-repeat;margin-left: -12px;}
 </style>    
 	<script>
 $(document).ready(function() {		
-	$('#sprite2').spriteOnHover({fps:30,orientation:'horizontal',rewind: false,loop:true,autostart:true,repeat:true});
-	$('#sprite1').spriteOnHover({fps:30,orientation:'vertical',rewind: false});
-	$('#sprite3').spriteOnHover({fps:30});
-	$('#sprite4').spriteOnHover({fps:30,loop: false,rewind: true,repeat:false});
-	$('#sprite5').spriteOnHover({fps:30});	
-	$('#sprite6').spriteOnHover({fps:30});
-	$('#sprite7').spriteOnHover({fps:30,loop:true, rewind: false,autostart:false});
-	$('#sprite8').spriteOnHover({fps:30});
+	$('#sprite1').spriteOnHover({fps:30,orientation:'vertical'});
+	$('#sprite2').spriteOnHover({fps:30,loop: true,rewind: false});
+	$('#sprite3').spriteOnHover({fps:30,loop: 'infinite'});
+	$('#sprite4').spriteOnHover({fps:30,autostart: true, loop: true});	
+	$('#sprite5').spriteOnHover({fps:30});
+	$('#sprite6').spriteOnHover({fps:30,loop:false, rewind: false,repeat:false});
 });
 
-</script>
+</script>	
 </head>
 
 <body>
-	<!--<div id="sprite1"></div>-->
-    <div id="sprite2"></div>
-    <div id="sprite3"></div>
-    <div id="sprite4"></div>
-    <div id="sprite5"></div>
-    <div id="sprite6"></div>
-    <div id="sprite7"></div>
-    <div id="sprite8"></div>
-    <div id="sprite9"></div>
-    
+	<div class="left">
+        Hover them!
+        <div id="sprite1"></div>
+        <div id="sprite2"></div>
+        <div id="sprite3"></div>
+        <div id="sprite4"></div>
+        <div id="sprite5"></div>
+        <div id="sprite6"></div>
+	</div>
+	<div class="right">
+        <a href="http://apolinariopassos.com.br/dev/spriteonhover-jquery-plugin/" style="position: absolute">Back to the plugin's page</a>
+    	<div id="codeSprite1" style="
+    margin-top: 55px;
+"><code>$('#sprite1').spriteOnHover({fps:30,orientation:'vertical'});</code> <a href="http://apolinariopassos.com.br/dev/spriteOnHover/demo/images/btn-seta-clientes-spritesheet-vert.png">Original Spritesheet</a></div>
+        <div id="codeSprite2" style="
+    margin-top: 93px;
+"><code>$('#sprite2').spriteOnHover({fps:30,loop: true,rewind: false,repeat:true});</code> <a href="http://apolinariopassos.com.br/dev/spriteOnHover/demo/images/smur-sprite.png">Original Spritesheet</a></div>
+        <div id="codeSprite3" style="
+    margin-top: 133px;
+"><code>$('#sprite3').spriteOnHover({fps:30,loop: 'infinite'});</code> <a href="http://apolinariopassos.com.br/dev/spriteOnHover/demo/images/servicos-spritesheet-midia.png">Original Spritesheet</a></div>
+        <div id="codeSprite4" style="
+    margin-top: 105px;
+"><code>$('#sprite4').spriteOnHover({fps:30,autostart: true, loop: true});</code> <a href="http://apolinariopassos.com.br/dev/spriteOnHover/demo/images/servicos-spritesheet-mobile.png">Original Spritesheet</a></div>
+        <div id="codeSprite5" style="
+    margin-top: 110px;
+"><code>$('#sprite5').spriteOnHover({fps:30});</code> <a href="http://apolinariopassos.com.br/dev/spriteOnHover/demo/images/servicos-spritesheet-sites.png">Original Spritesheet</a></div>
+        <div id="codeSprite6" style="
+    margin-top: 150px;
+"><code>$('#sprite6').spriteOnHover({fps:30,loop:false, rewind: false,repeat:false});</code> <a href="http://apolinariopassos.com.br/dev/spriteOnHover/demo/images/explosion-spritesheet.png">Original Spritesheet</a></div>
+   
+    <a href="http://www.apolinariopassos.com.br/dev/donate" style="margin-top: 76px; display: block; float:left; margin-right: 20px">Thanks for using spriteOnHover, consider donating <3</a>
+    </div>
 </body>
 
 </html>
