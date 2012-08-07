@@ -37,7 +37,7 @@ $.fn.spriteOnHover = function(args){
 					var looper_out;
 					var path = $(this).css('background-image').replace('url', '').replace('(', '').replace(')', '').replace('"', '').replace('"', '')
 					var count = $('img[id^="tempImg"]').length + 1;
-					var tempImg = '<img style="max-width: inherit !important;width: inherit !important;min-width: inherit !important;" id="tempImg'+count+'" src="' + path + ' "/>';
+					var tempImg = '<img style="max-width: none !important;width: auto!important;min-width: none!important;max-height:none !important;height: auto !important;min-height:none !important" id="tempImg'+count+'" src="' + path + ' "/>';
 					
 					$('body').append(tempImg); 
 					$('#tempImg'+count).hide();
