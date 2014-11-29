@@ -3,6 +3,10 @@
     "version"      : "0.2.5",
     "description"  : "jQuery spriteOnHover",
     "main"         : [ "./plugin/jquery.spriteOnHover-0.2.5.js", "./plugin/jquery.spriteOnHover-0.2.5.min.js" ],
+    "ignore"       : [
+                          ".*",
+                          "demo"
+                     ],
     "homepage"     : "http://apolinariopassos.com.br/dev/sprite-on-hover-jquery-plugin/",
     "dependencies" : {
         "jquery" : ">= 1.7.x"
